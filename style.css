@@ -1,0 +1,21 @@
+/*||RESET*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #012;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+/*||GLOBAL*/
+body {
+  background-color: #123;
+  color: #987;
+  font: clamp(1rem, 2.5vw, 2.5rem) monospace;
+  margin: auto;
+  max-width: 1000px;
+}
