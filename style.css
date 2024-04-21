@@ -1,6 +1,22 @@
 /*||IMPORT*/
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Tilt+Neon&display=swap');
 
+/*||VARIABLES*/
+:root {
+  /*Color*/
+  --BGCOL: #012;
+  --FNCOL: #4a4847;
+  --LKCOL: #eeff88;
+  --A1COL: #4e1fb3;
+  --A2COL: #f1e5db;
+  --A3COL: #ffcec5d8;
+  --A4COL: #123;
+  --FMCOL: linear-gradient(45deg,
+      rgb(223, 150, 210) 0%,
+      hsl(7deg 83% 83%) 50%,
+      hsl(41deg 35% 88%) 100%);
+}
+
 /*||RESET*/
 *,
 *::before,
@@ -11,41 +27,49 @@
 }
 
 html {
-  background-color: #012;
+  background-color: var(--BGCOL);
   font-size: 10px;
   scroll-behavior: smooth;
 }
 
 /*||GLOBAL*/
 body {
-  color: #987;
+  color: var(--FNCOL);
   font-family: "Jost", sans-serif;
   font-size: clamp(1rem, 2.5vw, 2.5rem);
   line-height: 1.4;
 }
 
+header {
+  color: var(--A1COL);
+}
+
 main {
   background-color: #123;
-  border: solid 2px blue;
+  background-image: var(--FMCOL);
+  border: solid 2px whitesmoke;
   border-radius: 20px;
   margin: 20px auto;
   max-width: 1000px;
   padding: 40px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 fieldset {
   border: none;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
   padding: 10px;
 }
 
-fieldset:last-of-type {
-  margin: 0;
-}
-
 legend {
+  font-size: 1.2em;
+  font-weight: 500;
   padding-top: 10px;
 }
 
@@ -55,33 +79,48 @@ select,
 textarea,
 button {
   appearance: none;
-  background-color: black;
+  background-color: var(--A2COL);
   border-radius: 20px;
-  border: solid 2px gray;
+  border: solid 2px whitesmoke;
+  box-shadow: 2px 2px 10px var(--A3COL);
   color: currentColor;
   flex: 1;
   font: inherit;
+  outline: none;
   padding: 10px;
   resize: none;
 }
 
 label {
   align-items: center;
-  background-color: black;
+  background-color: var(--A2COL);
   border-radius: 20px;
-  border: solid 2px gray;
+  border: solid 2px whitesmoke;
+  box-shadow: 2px 2px 10px var(--A3COL);
   cursor: pointer;
   display: flex;
   padding: 10px;
   width: 20%;
 }
 
-input[type=radio] {
-  accent-color: currentColor;
+input[type=radio],
+input[type=checkbox] {
+  filter: opacity(0.75);
+  cursor: pointer;
   font: inherit;
-  height: 1em;
+  height: 0.8em;
   margin-right: 15px;
-  width: 1em;
+  width: 0.8em;
+}
+
+input[type=radio]:checked,
+input[type=checkbox]:checked {
+  accent-color: var(--A2COL);
+  filter: none;
+}
+
+input[type=radio]:checked {
+  accent-color: var(--LKCOL);
 }
 
 select {
@@ -95,14 +134,17 @@ textarea {
 }
 
 button {
-  background-color: whitesmoke;
+  background-color: var(--LKCOL);
   cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 
 /*||FORM*/
 .selection-label {
   background-color: transparent;
   border: none;
+  box-shadow: none;
   padding: 0;
   padding-left: 10px;
   width: 46.5%;
