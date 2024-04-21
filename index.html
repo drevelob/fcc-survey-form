@@ -25,7 +25,6 @@
                autocomplete="on"
                required>
       </fieldset>
-      <br>
       <fieldset>
         <legend>Email</legend>
         <input type="email"
@@ -35,7 +34,6 @@
                autocomplete="on"
                required>
       </fieldset>
-      <br>
       <fieldset>
         <legend>What is your age group?</legend>
         <label>
@@ -68,25 +66,23 @@
           Over 35
         </label>
       </fieldset>
-      <br>
       <fieldset>
-        <legend>Colorful User?</legend>
+        <legend>Koolorful User?</legend>
         <label>
           <input type="radio"
                  name="colorful"
-                 id="colorful"
+                 id="colorful-yes"
                  value="true">
           Yes
         </label>
         <label>
           <input type="radio"
                  name="colorful"
-                 id="colorful"
+                 id="colorful-no"
                  value="false">
           No
         </label>
-        <br>
-        <label>
+        <label class="selection-label">
           Koolor
           <select name="color" id="color">
             <option disabled selected value>Select an option</option>
@@ -101,7 +97,6 @@
           </select>
         </label>
       </fieldset>
-      <br>
       <fieldset>
         <legend>Event connection platform?</legend>
         <label>
@@ -134,7 +129,6 @@
           Web
         </label>
       </fieldset>
-      <br>
       <fieldset>
         <legend>How satisfied are you with our event?</legend>
         <label>
@@ -166,7 +160,6 @@
           Dissatisfied
         </label>
       </fieldset>
-      <br>
       <fieldset>
         <legend>
           Are there any other comments or suggestions you'd like to make?
@@ -175,8 +168,9 @@
                   id="message"
                   placeholder="Type your message here..."></textarea>
       </fieldset>
-      <br>
-      <button type="submit" id="submit">Send</button>
+      <fieldset>
+        <button type="submit" id="submit">Send</button>
+      </fieldset>
     </form>
   </main>
 
