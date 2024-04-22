@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +9,18 @@
   <title>FCC Survey Form</title>
   <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
   <header>
     <div class="koolors-logo">
       <img src="./images/ciclon_1f300.svg" alt="logo" width="100px">
-      <h1>Koolors</h1>
+      <h1 id="title">Koolors</h1>
       <h2>Event</h2>
     </div>
-    <p>Satisfaction Survey Form</p>
+    <p id="description">Satisfaction Survey Form</p>
   </header>
 
   <main>
-    <form action="https://httpbin.org/get" method="get">
+    <form id="survey-form" action="https://httpbin.org/get" method="get">
       <fieldset>
         <legend>Name</legend>
         <input type="text"
@@ -32,6 +30,7 @@
                autocomplete="on"
                required>
       </fieldset>
+
       <fieldset>
         <legend>Email</legend>
         <input type="email"
@@ -41,6 +40,7 @@
                autocomplete="on"
                required>
       </fieldset>
+
       <fieldset>
         <legend>What is your age group?</legend>
         <label>
@@ -73,25 +73,37 @@
           Over 35
         </label>
       </fieldset>
+
+      <fieldset>
+        <legend>Age <span class="optional">(Optional)</span></legend>
+        <input type="number"
+               name="number-age"
+               id="number"
+               min="13"
+               max="100"
+               placeholder="Enter your Age"
+               autocomplete="on">
+      </fieldset>
+
       <fieldset>
         <legend>Koolorful User?</legend>
-        <label>
+        <label id="email-label">
           <input type="radio"
                  name="colorful"
                  id="colorful-yes"
                  value="true">
           Yes
         </label>
-        <label>
+        <label id="name-label">
           <input type="radio"
                  name="colorful"
                  id="colorful-no"
                  value="false">
           No
         </label>
-        <label class="selection-label">
+        <label id="number-label" class="selection-label">
           Koolor
-          <select name="color" id="color">
+          <select name="color" id="dropdown">
             <option disabled selected value>Select an option</option>
             <option value="pink">분홍색 (Pink)</option>
             <option value="yellow">노란색 (Yellow)</option>
@@ -104,6 +116,7 @@
           </select>
         </label>
       </fieldset>
+
       <fieldset>
         <legend>Event connection platform?</legend>
         <label>
@@ -136,6 +149,7 @@
           Web
         </label>
       </fieldset>
+
       <fieldset>
         <legend>How satisfied are you with our event?</legend>
         <label>
@@ -167,6 +181,7 @@
           Dissatisfied
         </label>
       </fieldset>
+
       <fieldset>
         <legend>
           Are there any other comments or suggestions you'd like to make?
@@ -175,6 +190,7 @@
                   id="message"
                   placeholder="Type your message here..."></textarea>
       </fieldset>
+
       <fieldset>
         <button type="submit" id="submit">Send</button>
       </fieldset>
@@ -196,5 +212,4 @@
     </small>
   </footer>
 </body>
-
 </html>
