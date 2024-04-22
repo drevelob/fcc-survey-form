@@ -32,6 +32,12 @@ html {
   scroll-behavior: smooth;
 }
 
+a:any-link {
+  color: var(--LKCOL);
+  text-decoration: none;
+  font-weight: bold;
+}
+
 /*||GLOBAL*/
 body {
   color: var(--FNCOL);
@@ -50,7 +56,6 @@ header {
 header p {
   font-style: italic;
   font-size: 1.25em;
-  /* padding-left: 100px; */
 }
 
 main {
@@ -187,4 +192,35 @@ button {
   padding: 0;
   padding-left: 10px;
   width: 46.5%;
+}
+
+/*||FOOTER*/
+.footer {
+  color: #f9faf8;
+  background-color: var(--A1COL);
+  font-family: monospace;
+  padding: 20px 30px;
+}
+
+.footer p {
+  margin-bottom: 20px;
+}
+
+.footer-button {
+  background-color: var(--A1COL);
+  border-radius: 5px;
+  filter: invert(1);
+  padding: 5px
+}
+
+.footer-info {
+  display: block;
+  padding-top: 10px;
+}
+
+.footer-info img {
+  display: inline;
+  width: 25px;
+  margin-bottom: -4px;
+  margin-right: -4px;
 }
