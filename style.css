@@ -42,13 +42,13 @@ a:any-link {
 body {
   color: var(--FNCOL);
   font-family: "Jost", sans-serif;
-  font-size: clamp(1rem, 2.5vw, 2.5rem);
+  font-size: clamp(1rem, 3vh, 2.5rem);
   line-height: 1.4;
 }
 
 header {
   color: var(--A2COL);
-  font-size: 1em;
+  font-size: clamp(0.75em, 3vw, 1em);
   padding: 30px;
   text-align: center;
 }
@@ -62,28 +62,30 @@ main {
   background-image: var(--FMCOL);
   border: solid 2px whitesmoke;
   border-radius: 20px;
-  margin: 20px auto;
+  margin: 0.8em auto;
   max-width: 1000px;
-  padding: 40px;
+  padding: 1.6em;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 1.6em;
 }
 
 fieldset {
   border: none;
   display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0.4em;
 }
 
 legend {
-  font-size: 1.2em;
+  font-size: clamp(1em, 3vw, 1.2em);
   font-weight: 500;
-  padding-top: 10px;
+  padding-top: 0.3em;
 }
 
 input[type=text],
@@ -101,7 +103,7 @@ button {
   flex: 1;
   font: inherit;
   outline: none;
-  padding: 10px;
+  padding: 0.4em;
   resize: none;
 }
 
@@ -113,8 +115,10 @@ label {
   box-shadow: 2px 2px 10px var(--A3COL);
   cursor: pointer;
   display: flex;
+  flex-grow: 1;
+  gap: 0.6em;
   padding: 10px;
-  width: 20%;
+  width: 7.2em;
 }
 
 input[type=radio],
@@ -123,7 +127,6 @@ input[type=checkbox] {
   cursor: pointer;
   font: inherit;
   height: 0.8em;
-  margin-right: 15px;
   width: 0.8em;
 }
 
@@ -139,7 +142,6 @@ input[type=radio]:checked {
 
 select {
   cursor: pointer;
-  margin: 0 0 0 30px;
   text-align: center;
 }
 
@@ -158,14 +160,12 @@ button {
 .koolors-logo {
   align-items: center;
   display: flex;
-  font-weight: 700;
-  margin-right: auto;
 }
 
 .koolors-logo img {
   filter: saturate(300%) brightness(200%) contrast(100%) hue-rotate(180deg);
   max-width: 500px;
-  min-width: 50px;
+  min-width: 75px;
   width: 4em;
 }
 
@@ -181,7 +181,7 @@ button {
 .koolors-logo h2 {
   color: var(--A4COL);
   font-size: 2em;
-  margin: 10px;
+  margin: 0.2em;
 }
 
 /*||FORM*/
@@ -195,6 +195,9 @@ button {
   background-color: transparent;
   border: none;
   box-shadow: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
   padding: 0;
   padding-left: 10px;
   width: 46.5%;
