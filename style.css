@@ -233,3 +233,13 @@ button {
   margin-bottom: -4px;
   margin-right: -4px;
 }
+
+/*||HOVER*/
+button:hover,
+label:hover,
+input[type=text]:hover,
+input[type=email]:hover,
+input[type=number]:hover,
+textarea:hover {
+  filter: brightness(1.1) saturate(1.5) hue-rotate(20deg);
+}
