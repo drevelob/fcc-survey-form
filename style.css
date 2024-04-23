@@ -48,8 +48,9 @@ body {
 
 header {
   color: var(--A2COL);
-  font-size: clamp(0.75em, 3vw, 1em);
-  padding: 30px;
+  font-size: clamp(0.75em, 3vw, 1.2em);
+  min-width: 300px;
+  padding: 1.2em;
   text-align: center;
 }
 
@@ -64,6 +65,7 @@ main {
   border-radius: 20px;
   margin: 0.8em auto;
   max-width: 1000px;
+  min-width: 300px;
   padding: 1.6em;
 }
 
@@ -105,6 +107,7 @@ button {
   outline: none;
   padding: 0.4em;
   resize: none;
+  width: 180px;
 }
 
 label {
@@ -160,6 +163,8 @@ button {
 .koolors-logo {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .koolors-logo img {
@@ -199,7 +204,6 @@ button {
   flex-wrap: wrap;
   gap: 1em;
   padding: 0;
-  padding-left: 10px;
   width: 46.5%;
 }
 
